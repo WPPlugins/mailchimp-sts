@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>MailChimp STS &mdash; API Setup Instructions</title>
+    <link rel="stylesheet" href="css/install.css" type="text/css" />
+</head>
+<body>
+<h1 style="text-align:center; background-image:url('images/light_freddie.png'); background-repeat:no-repeat; ">MailChimp STS &mdash; API Setup Instructions</h1>
+<p style="text-align:center;">Things you need to do before using the plugin</p>
+
+<h1>1. Install and activate the plugin.</h1>
+
+<p><em>MailChimp STS</em> page should appear in WordPress <em>Settings</em>.</p>
+
+<img src="images/settings_empty.png" width="700" height="600" />
+
+<h1>2. Get MailChimp API key.</h1>
+
+<p>Plugin will not work without MailChimp API key, which is unique and private to your account.</p>
+
+<p>If you do not have account yet <a href="http://www.mailchimp.com/signup/" title="MailChimp Sign Up">go to MailChimp and sign up</a>.</p>
+
+<img src="images/mailchimp_signup.png" width="700" height="600" />
+
+<p>Once the account is registered:</p>
+
+<ol>
+    <li>log in;</li>
+    <li>click on <em>Account</em> in top menu;</li>
+    <li>click <em>API keys</em> in dropdown menu;</li>
+    <li>click on <em>add a key</em> and your key should appear;</li>
+    <li>copy and paste it to plugin's settings screen;</li>
+    <li>save plugin's settings.</li>
+</ol>
+
+<img src="images/mailchimp_api_keys.png" height="400" width="700" />
+
+<h1>3. Get Amazon SES account.</h1>
+
+<p>You will need to have an Amazon account, which MailChimp will use to send emails.</p>
+
+<p>The Amazon service is scalable and will be able to store your email subscriptions and data as the list continues to grow.  If your list is small, you can opt for a free plan, but will need to activate the account with a credit card.  You can select a plan that charges you only for what you use.</p>
+
+<p>If you do not have account yet <a href="http://aws.amazon.com/ses/" title="Amazon SES Sign Up">go to Amazon and sign up</a>.</p>
+
+<img src="images/amazon_signup.png" width="700" height="400"  />
+
+<p>You will need phone confirmation to verify who you are.</p>
+<ol>
+    <li>PIN will pop up on screen;</li>
+    <li>input pin when asked on phone call.</li>
+
+</ol>
+
+<h1>4. Integrate Amazon SES with MailChimp.</h1>
+
+<p>Log in to Amazon and click on <em>Account</em> then <em>Security Credentials</em> for your secret access key.</p>
+
+<img src="images/amazon_security.png" width="700" height="380" />
+
+<p>There locate and copy <em>Access Key ID</em> and <em>Secret Access Key</em>.</p>
+
+<img src="images/amazon_keys.png" width="700" height="380" />
+
+<p>Log in to MailChimp and click on <em>Account</em>, then <em>Integrations</em>. Scroll to <em>Amazon Simple Email Service</em> and fill in your keys.</p>
+
+<img src="images/mailchimp_integration.png" width="700" height="380" />
+
+<h1>5. Request production access to Amazon SES.</h1>
+
+<p>Fill in and submit the form to <a href="http://aws.amazon.com/ses/fullaccessrequest" title="production access request form">request production access</a>.</p>
+
+<p>Without production access your account is put into <em>sandbox</em> mode and is unable to send emails to arbitrary email addresses.</p>
+
+<h1>6. Configure and test plugin.</h1>
+
+<ol>
+    <li>input and save your MailChimp API key in plugin's settings;</li>
+    <li>add, verify (and select if needed) email address that will be used as sender for emails;</li>
+    <li>verify that plugin is working, by sending email through email test form.</li>
+</ol>
+
+</body>
+</html>
